@@ -1,0 +1,13 @@
+<h3>Create Category</h3>
+<br>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Title Category</label>
+      <br>
+      <input type="text" class="form-control" id="titreCategorie" required [(ngModel)]="category.titreCategorie" name="titreCategorie">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

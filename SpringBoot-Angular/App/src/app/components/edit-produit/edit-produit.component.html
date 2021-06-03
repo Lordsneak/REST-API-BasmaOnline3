@@ -1,0 +1,35 @@
+<h3>Update Peoduit</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+      
+    <div class="form-group">
+        <label for="name">Title Product</label>
+        <input type="text" class="form-control" id="titleProduct" required [(ngModel)]="produit.titleProduct" name="titleProduct">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Description</label>
+        <input type="text" class="form-control" id="descriptionProduct" required [(ngModel)]="produit.descriptionProduct" name="descriptionProduct">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Price</label>
+        <input type="number" class="form-control" id="prixProduct" required [(ngModel)]="produit.prixProduct" name="prixProduct">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">qt Stock Product</label>
+        <input type="number" class="form-control" id="qtStockProduct" required [(ngModel)]="produit.qtStockProduct" name="qtStockProduct">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Category</label>
+   <select class="form-select" name="idCategorie" id="idCategorie">
+     <option *ngFor="let categorie of categories | async" value="{{categorie.idCategorie}}">{{categorie.titreCategorie}}</option>
+   </select>
+   <br>
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

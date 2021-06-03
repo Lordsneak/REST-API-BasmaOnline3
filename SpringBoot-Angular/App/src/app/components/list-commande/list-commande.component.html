@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Commandes</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Prix Total</th>
+            <th>Addresse</th>
+            <th>Ville</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commande of commandes | async">
+            <td>{{commande.commandeId}}</td>
+            <td>{{commande.prixTotalCommande}}</td>
+            <td>{{commande.addresseCommande}}</td>
+            <td>{{commande.ville}}</td>
+            <td>{{commande.descriptionCommande}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
